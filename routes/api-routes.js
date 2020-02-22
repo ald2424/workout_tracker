@@ -14,7 +14,10 @@ router.get("/api/workouts", (req, res) => {
 })
 
 router.put("/api/workouts/:id", function(req, res){
-    Workout.findByIdAndUpdate(req.params.id, {$push:{ exercises: req.body}})
+    console.log("**************************** Router.Put***********************************************")
+    console.log(req.body);
+    console.log("****************************")
+    Workout.findByIdAndUpdate(req.params.id, {$push:{ exercises: [req.body]}})
     .then(results => {
         res.json(results);
     })
@@ -22,5 +25,19 @@ router.put("/api/workouts/:id", function(req, res){
         res.json(err);
     })
 })
+
+// create a workout
+router.post("/api/workouts", ({body}, res) =>{
+    console.log("**************************** router.post ***********************************************")
+    console.log({body});
+    console.log("****************************")
+    Workout.create({body})
+    .then(workouts => {
+        res.json(workouts);
+    })
+    .catch(err => {
+        res.json(err);
+    })
+} )
 
 module.exports = router;
