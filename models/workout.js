@@ -34,6 +34,7 @@ const WorkoutSchema = new Schema({
                     weight: Number,
                     reps: Number,
                     sets: Number,
+                    distance: Number
                 }
             ]
 });
