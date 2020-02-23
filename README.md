@@ -8,3 +8,6 @@ The Homepage will either display the information of the last workout along with 
 When the user clicks either "Create New Workout" or "Add to Workout", the user is taken to page with a form where they will fill out information about their workout.
 ![AddExercise](/ReadMeAssets/AddExercise.png "Adding a workout")
 
+The user can click the "Fitness Tracker Dashboard" link in the upper left-hand corner which will take them to an analysis of their workout.
+![dashboard](/ReadMeAssets/dashboard.png "dashboard")
+
